@@ -16,7 +16,8 @@ library(tidyr)
 data(faithful)
 ```
 
-
+Home
+=====================================
 
 
 NewPage {data-navmenu="Menu A" data-icon="fa-list"}

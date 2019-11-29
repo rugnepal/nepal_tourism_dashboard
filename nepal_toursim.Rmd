@@ -1,7 +1,9 @@
 ---
 title: "Nepal Tourism Dashboard"
-output: flexdashboard::flex_dashboard
-runtime: shiny
+output: 
+  flexdashboard::flex_dashboard:
+    vertical_layout: scroll
+# runtime: shiny
 ---
 
 ```{r global, include=FALSE}
@@ -20,7 +22,7 @@ Home
 =====================================
 
 
-NewPage {data-navmenu="Menu A" data-icon="fa-list"}
+Home 
 =====================================  
     
 Column {.sidebar}
@@ -29,31 +31,69 @@ Column {.sidebar}
 Waiting time between eruptions and the duration of the eruption for the
 Old Faithful geyser in Yellowstone National Park, Wyoming, USA.
 
-```{r}
-selectInput("n_breaks", label = "Number of bins:",
-            choices = c(10, 20, 35, 50), selected = 20)
-
-sliderInput("bw_adjust", label = "Bandwidth adjustment:",
-            min = 0.2, max = 2, value = 1, step = 0.2)
-```
 
 Column
 -----------------------------------------------------------------------
 
 ### Geyser Eruption Duration
 
-```{r}
-renderPlot({
-  hist(faithful$eruptions, probability = TRUE, breaks = as.numeric(input$n_breaks),
-       xlab = "Duration (minutes)", main = "Geyser Eruption Duration")
-  
-  dens <- density(faithful$eruptions, adjust = input$bw_adjust)
-  lines(dens, col = "blue")
-})
-```
-   
+NewPage1 {data-navmenu="Overview" data-icon="fa-list" data-orientation=columns}
+=====================================     
 
-NewPage1 {data-navmenu="Menu A" data-icon="fa-list"}
+   
+Row {data-height=600}
+-------------------------------------
+
+### Chart 1
+
+```{r}
+```
+
+   
+Row {data-height=600 }
+-------------------------------------
+
+
+   
+### Chart 2
+
+<img src="https://i.stack.imgur.com/FuC4h.png">
+
+```{r}
+
+```   
+    
+### Chart 3
+<img src="https://i.stack.imgur.com/FuC4h.png">
+```{r}
+```
+
+### Chart 4
+<img src="https://i.stack.imgur.com/FuC4h.png">
+```{r}
+```
+
+### Chart 5
+<img src="https://i.stack.imgur.com/FuC4h.png">
+```{r}
+```
+
+
+### Chart 6
+<img src="https://i.stack.imgur.com/FuC4h.png">
+```{r}
+```
+
+### Chart 7
+<img src="https://i.stack.imgur.com/FuC4h.png">
+```{r}
+```
+
+
+
+
+
+NewPage1 {data-navmenu="Visitors Market" data-icon="fa-list"}
 =====================================     
    
 Row {data-height=600}
@@ -70,9 +110,117 @@ Row {data-height=400}
 ### Chart 2
 
 ```{r}
+
 ```   
     
 ### Chart 3
 
 ```{r}
 ```
+
+NewPage2 {data-navmenu="Visitors Market" data-icon="fa-list"}
+=====================================     
+   
+Row {data-height=600}
+-------------------------------------
+
+### Chart 1
+
+```{r}
+```
+
+Row {data-height=400}
+-------------------------------------
+   
+### Chart 2
+
+```{r}
+
+```   
+    
+### Chart 3
+
+```{r}
+```
+
+
+
+NewPage1 {data-navmenu="Region" data-icon="fa-list"}
+=====================================     
+   
+Row {data-height=600}
+-------------------------------------
+
+### Chart 1
+
+```{r}
+```
+
+Row {data-height=400}
+-------------------------------------
+   
+### Chart 2
+
+```{r}
+
+```   
+    
+### Chart 3
+
+```{r}
+```
+
+
+NewPage1 {data-navmenu="Industry" data-icon="fa-list"}
+=====================================     
+   
+Row {data-height=600}
+-------------------------------------
+
+### Chart 1
+
+```{r}
+```
+
+Row {data-height=400}
+-------------------------------------
+   
+### Chart 2
+
+```{r}
+
+```   
+    
+### Chart 3
+
+```{r}
+```
+
+
+
+
+NewPage1 {data-navmenu="Economic Context" data-icon="fa-list"}
+=====================================     
+   
+Row {data-height=600}
+-------------------------------------
+
+### Chart 1
+
+```{r}
+```
+
+Row {data-height=400}
+-------------------------------------
+   
+### Chart 2
+
+```{r}
+
+```   
+    
+### Chart 3
+
+```{r}
+```
+

@@ -13,7 +13,10 @@ library(dplyr)
 library(readr)
 library(readxl)
 library(janitor)
+<<<<<<< HEAD:scripts/library.R
 library(leaflet)
 library(geojsonio)
 library(tigris)
 library(RColorBrewer)
+=======
+>>>>>>> b7a23b4e7e128547c1d697f59f544d88b703ed65:library.R

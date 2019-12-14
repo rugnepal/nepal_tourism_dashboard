@@ -7,17 +7,11 @@ output:
 
 ---
 
-<<<<<<< HEAD:nepal_tourism.Rmd
 ```{r global, message=FALSE, warning=FALSE, include=FALSE}
 source('scripts/library.R')
 source('scripts/visualize.R')
-=======
-```{r global, include=FALSE}
-source('library.R')
-source('visualize.R')
-source('country.R')
-source('visitor.R')
->>>>>>> b7a23b4e7e128547c1d697f59f544d88b703ed65:nepal_toursim.Rmd
+source('scripts/country.R')
+source('scripts/visitor.R')
 ```
 
 Home 
@@ -30,16 +24,6 @@ Column {.sidebar}
 Column3
 -----------------------------------------------------------------------
 
-
-<<<<<<< HEAD:nepal_tourism.Rmd
-NewPage1 {data-navmenu="Visitors Market" data-icon="fa-list"}
-=====================================     
-   
-Row {data-height=400}
--------------------------------------
-   
-### Chart 0
-=======
 
 Visitors
 =====================================     
@@ -65,17 +49,17 @@ valueBox(comments, icon = "fa-comments")
  Column {.tabset .tabset-fade data-width=700 .colored }
 -----------------------------------------------------------------------
    
-<!-- ### Chart 0 {.no-padding} -->
+### Chart 0 {.no-padding}
 
-<!-- ```{r} -->
-<!-- tourist_arrival_average_length_stay <- read_excel("data/tourist_arrival_average_length_stay.xlsx") -->
-<!-- ``` -->
+```{r}
+tourist_arrival_average_length_stay <- read_excel("data/tourist_arrival_average_length_stay.xlsx")
+```
 
 
-<!-- ```{r} -->
-<!-- hchart(tourist_arrival_average_length_stay,"spline", hcaes(x = Year,y = Number),name = "Number of Tourist")  -->
+```{r}
+hchart(tourist_arrival_average_length_stay,"spline", hcaes(x = Year,y = Number),name = "Number of Tourist")
 
-<!-- ```   -->
+```
 
     
 ### Tourist Arrival {.no-padding}
@@ -134,9 +118,6 @@ tourist_arrival_country_time
 ```   
     
 
-
-
-<<<<<<< HEAD:nepal_tourism.Rmd
 NewPage1 {data-navmenu="Region" data-icon="fa-list"}
 =====================================     
    
@@ -144,41 +125,6 @@ Row {data-height=600}
 -------------------------------------
 =======
 
-<!-- NewPage1 {data-navmenu="Region" data-icon="fa-list"} -->
-<!-- =====================================      -->
->>>>>>> b7a23b4e7e128547c1d697f59f544d88b703ed65:nepal_toursim.Rmd
-
-<!-- Row {data-height=600} -->
-<!-- ------------------------------------- -->
-
-<!-- ### Chart 1 -->
-
-<!-- ```{r} -->
-
-<!-- ``` -->
-
-<!-- Row {data-height=400} -->
-<!-- ------------------------------------- -->
-
-<!-- ### Chart 2 -->
-
-<!-- ```{r} -->
-
-<!-- ```    -->
-
-<!-- ### Chart 3 -->
-
-<!-- ```{r} -->
-<!-- ``` -->
-
-
-<!-- NewPage1 {data-navmenu="Industry" data-icon="fa-list"} -->
-<!-- =====================================      -->
-
-<!-- Row {data-height=600} -->
-<!-- ------------------------------------- -->
-
-<!-- ### Chart 1 -->
 
 NewPage1 {data-navmenu="Purpose of Visit" data-icon="fa-list"}
 =======
@@ -257,104 +203,8 @@ ggplotly(GROSS_FOREIGN_EXCHANGE_EARNINGS_FROM_TOURISM_US_chart) %>% config(displ
 ggplotly(gdp_chart) %>% config(displayModeBar = F)
 
 ```   
-    
-
-Row {data-height=400}
-=======
-
-# ggplotly() %>% config(displayModeBar = F)
-
 
 
 Hospitality
 ==============================================
-
-
-<!-- NewPage1 {data-navmenu="Economic Context" data-icon="fa-list"} -->
-<!-- =====================================      -->
-
-<!-- Row {data-height=600} -->
-<!-- ------------------------------------- -->
-
-<!-- ### Chart 1 -->
-
-<!-- ```{r} -->
-<!-- ``` -->
-
-<!-- Row {data-height=400} -->
-<!-- ------------------------------------- -->
-
-<!-- ### Chart 2 -->
-
-<!-- ```{r} -->
-
-<!-- ```    -->
-
-<!-- ### Chart 3 -->
-
-<!-- ```{r} -->
-=======
-<!-- Search {data-icon="fa-search"} -->
-<!-- ======================================================================= -->
-
-<!-- Column {data-width=250} -->
-<!-- ----------------------------------------------------------------------- -->
-
-<!-- ### Filters {.no-title .colored } -->
-
-<!-- **Pick filters here:** -->
-<!-- ```{r} -->
-<!-- # Create tibble for our line plot.   -->
-<!-- country_year_tibble <- page_38_tourist_arrival_nationality_month %>% -->
-<!--   select(natonality, year, total) %>% -->
-<!--   group_by(country, year) %>% -->
-<!--   summarise(suicide_capita = round((sum(suicides_no)/sum(population))*100000, 2))  -->
-
-<!-- # Create shared data that will be used to link filters, data table, and line plot.  -->
-<!-- shared_data <- SharedData$new(country_year_tibble, group = 'hello') -->
-
-<!-- # Create filter for year and country. These filters will adjust the DT datatable and PLOTLY plot.  -->
-<!-- filter_slider("year", "year", shared_data, ~year, step = 1) -->
-<!-- filter_select("country", "natonality", shared_data, ~country, allLevels = TRUE, multiple = TRUE) -->
-<!-- ``` -->
-
-<!-- *** -->
-
-<!-- **Data table** -->
-<!-- ```{r} -->
-<!-- # Create datatable.  -->
-<!-- datatable(shared_data, -->
-<!--           rownames = FALSE, -->
-<!--           colnames = c('Country', 'Year', 'Suicides /100K'), -->
-<!--           class = 'cell-border stripe', -->
-<!--           extensions = "Scroller", -->
-<!--           options=list(deferRender = FALSE,  -->
-<!--                        scrollY = 200,  -->
-<!--                        scrollCollapse = TRUE, -->
-<!--                        scroller = TRUE, -->
-<!--                        dom = 't')) -->
-<!-- ``` -->
-
-
-<!-- Column {data-width=750} -->
-<!-- ----------------------------------------------------------------------- -->
-
-<!-- ### Suicides by country {.no-title .colored } -->
-<!-- ```{r} -->
-<!-- # Set a random seed. We will do this so that we can reproduce the random sample of colors we will use for our next graph.  -->
-<!-- set.seed(80085) -->
-
-<!-- # Create line graph.  -->
-<!-- plot_ly(shared_data, x = ~year, y = ~suicide_capita,  -->
-<!--        color = ~country, colors = sample(colours(), 120), -->
-<!--        type = 'scatter', mode = 'lines', -->
-<!--        hoverinfo = 'text', text = ~paste("Country: ", country, 'Year: ', year, "Suicides: ", suicide_capita)) %>% -->
-<!--        layout(showlegend = FALSE, -->
-<!--               title = "Suicide by country", -->
-<!--               xaxis = list(title = "Year"), -->
-<!--               yaxis = list(title = "Suicides per 100K people")) %>% -->
-<!--        layout(plot_bgcolor = 'transparent') %>%  -->
-<!--        layout(paper_bgcolor = 'transparent') %>%  -->
-<!--        add_markers() %>%  -->
-<!--        highlight("plotly_click") -->
 

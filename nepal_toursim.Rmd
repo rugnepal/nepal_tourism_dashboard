@@ -3,19 +3,12 @@ title: "Nepal Tourism Dashboard"
 output: 
   flexdashboard::flex_dashboard:
     vertical_layout: scroll
-# runtime: shiny
+
 ---
 
 ```{r global, include=FALSE}
-# load data in 'global' chunk so it can be shared by all users of the dashboard
-library(datasets)
-library(readr)
-library(readxl)
-library(ggplot2)
-library(echarts4r)
-library(dplyr)
-library(tidyr)
-data(faithful)
+source('library.R')
+source('visualize.R')
 ```
 
 Home
@@ -28,14 +21,12 @@ Home
 Column {.sidebar}
 -----------------------------------------------------------------------
 
-Waiting time between eruptions and the duration of the eruption for the
-Old Faithful geyser in Yellowstone National Park, Wyoming, USA.
 
 
-Column
+Column3
 -----------------------------------------------------------------------
 
-### Geyser Eruption Duration
+### Home 
 
 NewPage1 {data-navmenu="Overview" data-icon="fa-list" data-orientation=columns}
 =====================================     
@@ -46,8 +37,7 @@ Row {data-height=600}
 
 ### Chart 1
 
-```{r}
-```
+
 
    
 Row {data-height=600 }
@@ -57,37 +47,11 @@ Row {data-height=600 }
    
 ### Chart 2
 
-<img src="https://i.stack.imgur.com/FuC4h.png">
+
 
 ```{r}
 
 ```   
-    
-### Chart 3
-<img src="https://i.stack.imgur.com/FuC4h.png">
-```{r}
-```
-
-### Chart 4
-<img src="https://i.stack.imgur.com/FuC4h.png">
-```{r}
-```
-
-### Chart 5
-<img src="https://i.stack.imgur.com/FuC4h.png">
-```{r}
-```
-
-
-### Chart 6
-<img src="https://i.stack.imgur.com/FuC4h.png">
-```{r}
-```
-
-### Chart 7
-<img src="https://i.stack.imgur.com/FuC4h.png">
-```{r}
-```
 
 
 
@@ -96,12 +60,30 @@ Row {data-height=600 }
 NewPage1 {data-navmenu="Visitors Market" data-icon="fa-list"}
 =====================================     
    
-Row {data-height=600}
+Row {data-height=400}
 -------------------------------------
+   
+### Chart 0
 
+```{r}
+tourist_arrival_average_length_stay <- read_excel("data/tourist_arrival_average_length_stay.xlsx")
+```
+
+
+```{r}
+hchart(tourist_arrival_average_length_stay,"spline", hcaes(x = Year,y = Number),name = "Number of Tourist") 
+
+```  
+
+    
 ### Chart 1
 
 ```{r}
+page_38_tourist_arrival_nationality_month <- read_excel("data/page_38_tourist_arrival_nationality_month.xlsx")
+```
+
+```{r}
+num_tourist
 ```
 
 Row {data-height=400}
@@ -111,11 +93,13 @@ Row {data-height=400}
 
 ```{r}
 
+ave_tourist_stay
 ```   
     
 ### Chart 3
 
 ```{r}
+
 ```
 
 NewPage2 {data-navmenu="Visitors Market" data-icon="fa-list"}
@@ -154,6 +138,7 @@ Row {data-height=600}
 ### Chart 1
 
 ```{r}
+
 ```
 
 Row {data-height=400}

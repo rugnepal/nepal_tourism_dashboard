@@ -6,9 +6,9 @@ output:
 
 ---
 
-```{r global, include=FALSE}
-source('library.R')
-source('visualize.R')
+```{r global, message=FALSE, warning=FALSE, include=FALSE}
+source('scripts/library.R')
+source('scripts/visualize.R')
 ```
 
 Home 
@@ -18,36 +18,8 @@ Column {.sidebar}
 -----------------------------------------------------------------------
 
 
-
 Column3
 -----------------------------------------------------------------------
-
-### Home 
-
-NewPage1 {data-navmenu="Overview" data-icon="fa-list" data-orientation=columns}
-=====================================     
-
-   
-Row {data-height=600}
--------------------------------------
-
-### Chart 1
-
-
-   
-Row {data-height=600 }
--------------------------------------
-
-
-   
-### Chart 2
-
-```{r}
-
-```   
-
-
-
 
 
 NewPage1 {data-navmenu="Visitors Market" data-icon="fa-list"}
@@ -104,6 +76,8 @@ Row {data-height=600}
 ### Chart 1
 
 ```{r}
+
+
 ```
 
 Row {data-height=400}
@@ -119,7 +93,6 @@ Row {data-height=400}
 
 ```{r}
 ```
-
 
 
 NewPage1 {data-navmenu="Region" data-icon="fa-list"}
@@ -148,57 +121,78 @@ Row {data-height=400}
 ```{r}
 ```
 
-
-NewPage1 {data-navmenu="Industry" data-icon="fa-list"}
+NewPage1 {data-navmenu="Purpose of Visit" data-icon="fa-list"}
 =====================================     
    
-Row {data-height=600}
+Row {data-height=400}
 -------------------------------------
 
 ### Chart 1
 
 ```{r}
+plot_pilgrimage_purpose  
 ```
 
-Row {data-height=400}
--------------------------------------
    
 ### Chart 2
 
 ```{r}
-
+plot_business_purpose
 ```   
     
+
 ### Chart 3
 
 ```{r}
+plot_trekking_purpose
 ```
 
-
-
-
-NewPage1 {data-navmenu="Economic Context" data-icon="fa-list"}
-=====================================     
-   
-Row {data-height=600}
--------------------------------------
-
-### Chart 1
-
-```{r}
-```
 
 Row {data-height=400}
 -------------------------------------
-   
-### Chart 2
+
+
+### Chart 4
 
 ```{r}
-
-```   
-    
-### Chart 3
-
-```{r}
+plot_official_purpose
 ```
+
+### Chart 5
+
+```{r}
+plot_conv_conf_purpose
+```
+
+### Chart 6
+
+```{r}
+plot_others_purpose
+```
+
+
+<!-- NewPage1 {data-navmenu="Economic Context" data-icon="fa-list"} -->
+<!-- =====================================      -->
+
+<!-- Row {data-height=600} -->
+<!-- ------------------------------------- -->
+
+<!-- ### Chart 1 -->
+
+<!-- ```{r} -->
+<!-- ``` -->
+
+<!-- Row {data-height=400} -->
+<!-- ------------------------------------- -->
+
+<!-- ### Chart 2 -->
+
+<!-- ```{r} -->
+
+<!-- ```    -->
+
+<!-- ### Chart 3 -->
+
+<!-- ```{r} -->
+<!-- ``` -->
 

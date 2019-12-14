@@ -79,7 +79,6 @@ valueBox(comments, icon = "fa-comments")
 
     
 ### Tourist Arrival {.no-padding}
->>>>>>> b7a23b4e7e128547c1d697f59f544d88b703ed65:nepal_toursim.Rmd
 
 ```{r}
 page_38_tourist_arrival_nationality_month <- read_excel("data/page_38_tourist_arrival_nationality_month.xlsx")
@@ -122,12 +121,8 @@ Row {data-height=600}
 ### Tourist By Country
 
 ```{r}
-<<<<<<< HEAD:nepal_tourism.Rmd
 
-
-=======
 tourist_by_country_chart
->>>>>>> b7a23b4e7e128547c1d697f59f544d88b703ed65:nepal_toursim.Rmd
 ```
 
 
@@ -185,84 +180,33 @@ Row {data-height=600}
 
 <!-- ### Chart 1 -->
 
-<<<<<<< HEAD:nepal_tourism.Rmd
 NewPage1 {data-navmenu="Purpose of Visit" data-icon="fa-list"}
 =======
-<!-- ```{r} -->
-<!-- ``` -->
 
-<!-- Row {data-height=400} -->
-<!-- ------------------------------------- -->
-
-<!-- ### Chart 2 -->
-
-<!-- ```{r} -->
-
-<!-- ```    -->
-
-<!-- ### Chart 3 -->
-
-<!-- ```{r} -->
-<!-- ``` -->
-
-
-
-
-NewPage1 {data-navmenu="Economic Context" data-icon="fa-list"}
->>>>>>> b7a23b4e7e128547c1d697f59f544d88b703ed65:nepal_toursim.Rmd
-=====================================     
-   
-Row {data-height=400}
+Row {data-height=600}
 -------------------------------------
+
 
 ### Chart 1
 
 ```{r}
-<<<<<<< HEAD:nepal_tourism.Rmd
 plot_pilgrimage_purpose  
-=======
-ggplotly(GROSS_FOREIGN_EXCHANGE_EARNINGS_FROM_TOURISM_NRS_chart) %>% config(displayModeBar = F)
 ```
 
-
-### Chart 0
-
-```{r}
-ggplotly(GROSS_FOREIGN_EXCHANGE_EARNINGS_FROM_TOURISM_US_chart) %>% config(displayModeBar = F)
->>>>>>> b7a23b4e7e128547c1d697f59f544d88b703ed65:nepal_toursim.Rmd
-```
-
-   
 ### Chart 2
 
 ```{r}
-<<<<<<< HEAD:nepal_tourism.Rmd
 plot_business_purpose
-=======
-ggplotly(gdp_chart) %>% config(displayModeBar = F)
->>>>>>> b7a23b4e7e128547c1d697f59f544d88b703ed65:nepal_toursim.Rmd
-```   
-    
+```
 
 ### Chart 3
 
 ```{r}
-<<<<<<< HEAD:nepal_tourism.Rmd
 plot_trekking_purpose
+
 ```
-
-
-Row {data-height=400}
-=======
-# ggplotly() %>% config(displayModeBar = F)
-```
-
-
-Hospitality
-==============================================
 
 Row {data-height=600}
->>>>>>> b7a23b4e7e128547c1d697f59f544d88b703ed65:nepal_toursim.Rmd
 -------------------------------------
 
 
@@ -285,7 +229,47 @@ plot_others_purpose
 ```
 
 
-<<<<<<< HEAD:nepal_tourism.Rmd
+NewPage1 {data-navmenu="Economic Context" data-icon="fa-list"}
+=====================================     
+   
+Row {data-height=400}
+-------------------------------------
+
+### Chart 1
+
+```{r}
+
+ggplotly(GROSS_FOREIGN_EXCHANGE_EARNINGS_FROM_TOURISM_NRS_chart) %>% config(displayModeBar = F)
+```
+
+
+### Chart 0
+
+```{r}
+ggplotly(GROSS_FOREIGN_EXCHANGE_EARNINGS_FROM_TOURISM_US_chart) %>% config(displayModeBar = F)
+
+```
+
+   
+### Chart 2
+
+```{r}
+ggplotly(gdp_chart) %>% config(displayModeBar = F)
+
+```   
+    
+
+Row {data-height=400}
+=======
+
+# ggplotly() %>% config(displayModeBar = F)
+
+
+
+Hospitality
+==============================================
+
+
 <!-- NewPage1 {data-navmenu="Economic Context" data-icon="fa-list"} -->
 <!-- =====================================      -->
 
@@ -373,6 +357,4 @@ plot_others_purpose
 <!--        layout(paper_bgcolor = 'transparent') %>%  -->
 <!--        add_markers() %>%  -->
 <!--        highlight("plotly_click") -->
->>>>>>> b7a23b4e7e128547c1d697f59f544d88b703ed65:nepal_toursim.Rmd
-<!-- ``` -->
 

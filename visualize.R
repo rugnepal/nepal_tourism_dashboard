@@ -9,3 +9,7 @@ num_tourist <- ggplot(tourist_arrival_average_length_stay) + geom_line(aes(x = Y
 
 # Tourist Average Stay
 ave_tourist_stay <- ggplot(tourist_arrival_average_length_stay) + geom_line(aes(x = Year, y = `Average Length of Stay`),size = 1) + labs(title = "Average Length of Stay")+ theme_minimal()
+
+
+
+

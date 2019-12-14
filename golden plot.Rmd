@@ -1,0 +1,61 @@
+---
+title: "golden plots"
+author: "Diwash Shrestha"
+date: "11/29/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+```{r}
+library(ggplot2)
+points <- 50000
+# Defining the Golden Angle
+angle <- pi*sqrt(29-sqrt(149))
+t <- (1:points) * angle - angle
+x <- sin(t/-23)
+y <- cos(t/2)*sin(t/30)
+z <- rep(c(1,2,3,4,5,6,7,8,9,10), times=50)
+w <- rep(c(1,2), times=250)
+df <- data.frame(t, x, y, z, w)
+# Have a look at the data
+head(df)
+```
+
+```{r}
+# Make a scatter plot of points of a spiral
+p <- ggplot(df, aes(x*t, y*t))
+p + geom_point(alpha= 0.1,size = .1,color = "black")+theme_void()
+
+```
+
+
+
+```{r}
+p <- ggplot(df, aes(x*t, y*t, col=factor(z)))
+p + geom_point()
+```
+

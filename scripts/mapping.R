@@ -1,7 +1,6 @@
 ### Mapping module
 
 ### required Library
-source('script/package.R')
 
 province_map <- topojson_read("data/map/gis-data/province.topojson")
 
@@ -25,7 +24,7 @@ create_map <- function(df_address,column1,column2, bins =
   label2 <- as.list(paste0("<strong>",new_data$district,"</strong>","<br/>House: ",new_data[[column1]],"<br/> Bed:",new_data[[column2]]) %>% lapply(htmltools::HTML))
   ### new cloropeth map
   new_map <- leaflet(new_data) %>%
-    setView(84.1240,28.3949,6) %>%
+    setView(84.1240,28.3949, 7) %>%
     addProviderTiles("Esri.WorldGrayCanvas", options = leafletOptions(minZoom = 6,maxZoom = 9))
   
   new_map %>% addPolygons(data = new_data,

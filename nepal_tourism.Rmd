@@ -22,13 +22,10 @@ Home
 
 
 
-Column3
+Column3 {data-height = 800}
 -----------------------------------------------------------------------
 
 ![](https://nepalimag.com/wp-content/uploads/2018/08/VISIT-NEPAL-2020-TRAVEL-NEPAL-WELCOME-NEPAL.jpeg)
-
-<a class="twitter-timeline" href="https://twitter.com/2020visitnepal?ref_src=twsrc%5Etfw">Tweets by 2020visitnepal</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 
 
 Visitors
@@ -249,4 +246,26 @@ trek_df_chart
 
 ```
 
-  
+Trial Context
+=====================================   
+
+Row {data-width = 600}
+-------------------------------------
+    
+### Chart 1
+    
+```{r}
+```
+   
+Row {data-width = 600}
+-------------------------------------
+   
+### Chart 2
+
+```{r}
+```   
+ 
+### Chart 3
+    
+```{r}
+```

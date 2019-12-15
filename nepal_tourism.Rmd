@@ -2,13 +2,16 @@
 title: "Nepal Tourism Dashboard"
 output: 
   flexdashboard::flex_dashboard:
+    orientation: rows
     vertical_layout: scroll
 
 ---
 
-```{r global, include=FALSE}
-source('library.R')
-source('visualize.R')
+```{r global, message=FALSE, warning=FALSE, include=FALSE}
+source('scripts/library.R')
+source('scripts/visualize.R')
+source('scripts/country.R')
+source('scripts/visitor.R')
 ```
 
 Home 
@@ -18,45 +21,35 @@ Column {.sidebar}
 -----------------------------------------------------------------------
 
 
-
 Column3
 -----------------------------------------------------------------------
 
-### Home 
 
-NewPage1 {data-navmenu="Overview" data-icon="fa-list" data-orientation=columns}
+Visitors
 =====================================     
 
-   
-Row {data-height=600}
--------------------------------------
+Row {data-width=150}
+-----------------------------------------------------------------------
 
-### Chart 1
-
-
-   
-Row {data-height=600 }
--------------------------------------
-
-
-   
-### Chart 2
+### Tourist Arrival 2018 {.value-box}
 
 ```{r}
+articles <- tourist_arrival_average_length_stay$Number%>% tail(1)
+valueBox(articles, icon = "fa-pencil")
+```
 
-```   
+### Average Stay 2018 {.value-box}
+
+```{r}
+comments <- tourist_arrival_average_length_stay$`Average Length of Stay`%>% tail(1) 
+valueBox(comments, icon = "fa-comments")
+```
 
 
-
-
-
-NewPage1 {data-navmenu="Visitors Market" data-icon="fa-list"}
-=====================================     
+ Column {.tabset .tabset-fade data-width=700 .colored }
+-----------------------------------------------------------------------
    
-Row {data-height=400}
--------------------------------------
-   
-### Chart 0
+### Chart 0 {.no-padding}
 
 ```{r}
 tourist_arrival_average_length_stay <- read_excel("data/tourist_arrival_average_length_stay.xlsx")
@@ -64,29 +57,37 @@ tourist_arrival_average_length_stay <- read_excel("data/tourist_arrival_average_
 
 
 ```{r}
-hchart(tourist_arrival_average_length_stay,"spline", hcaes(x = Year,y = Number),name = "Number of Tourist") 
+hchart(tourist_arrival_average_length_stay,"spline", hcaes(x = Year,y = Number),name = "Number of Tourist")
 
-```  
+```
 
     
-### Chart 1
+### Tourist Arrival {.no-padding}
 
 ```{r}
 page_38_tourist_arrival_nationality_month <- read_excel("data/page_38_tourist_arrival_nationality_month.xlsx")
 ```
 
 ```{r}
-num_tourist
+ggplotly(num_tourist)%>% config(displayModeBar = F)
 ```
 
-Row {data-height=400}
+
+    
+### Tourist Arrival By Gender {.no-padding}
+
+```{r}
+ggplotly(tourist_arrival_sex_chart)%>% config(displayModeBar = F)
+```
+
+Row {data-height=450}
 -------------------------------------
    
 ### Chart 2
 
 ```{r}
 
-ave_tourist_stay
+ggplotly(ave_tourist_stay)%>% config(displayModeBar = F)
 ```   
     
 ### Chart 3
@@ -95,110 +96,115 @@ ave_tourist_stay
 
 ```
 
-NewPage2 {data-navmenu="Visitors Market" data-icon="fa-list"}
+Country 
 =====================================     
    
 Row {data-height=600}
 -------------------------------------
 
-### Chart 1
+### Tourist By Country
 
 ```{r}
+
+tourist_by_country_chart
 ```
 
-Row {data-height=400}
--------------------------------------
+
    
-### Chart 2
+### Tourist By Nationality
 
 ```{r}
-
+tourist_arrival_country_time
 ```   
     
-### Chart 3
-
-```{r}
-```
-
-
 
 NewPage1 {data-navmenu="Region" data-icon="fa-list"}
 =====================================     
    
 Row {data-height=600}
 -------------------------------------
-
-### Chart 1
-
-```{r}
-
-```
-
-Row {data-height=400}
--------------------------------------
-   
-### Chart 2
-
-```{r}
-
-```   
-    
-### Chart 3
-
-```{r}
-```
+=======
 
 
-NewPage1 {data-navmenu="Industry" data-icon="fa-list"}
-=====================================     
-   
+NewPage1 {data-navmenu="Purpose of Visit" data-icon="fa-list"}
+=======
+
 Row {data-height=600}
 -------------------------------------
 
+
 ### Chart 1
 
 ```{r}
+plot_pilgrimage_purpose  
 ```
 
-Row {data-height=400}
--------------------------------------
-   
 ### Chart 2
 
 ```{r}
+plot_business_purpose
+```
 
-```   
-    
 ### Chart 3
 
 ```{r}
+plot_trekking_purpose
+
 ```
 
+Row {data-height=600}
+-------------------------------------
 
+
+### Chart 4
+
+```{r}
+plot_official_purpose
+```
+
+### Chart 5
+
+```{r}
+plot_conv_conf_purpose
+```
+
+### Chart 6
+
+```{r}
+plot_others_purpose
+```
 
 
 NewPage1 {data-navmenu="Economic Context" data-icon="fa-list"}
 =====================================     
    
-Row {data-height=600}
+Row {data-height=400}
 -------------------------------------
 
 ### Chart 1
 
 ```{r}
+
+ggplotly(GROSS_FOREIGN_EXCHANGE_EARNINGS_FROM_TOURISM_NRS_chart) %>% config(displayModeBar = F)
 ```
 
-Row {data-height=400}
--------------------------------------
+
+### Chart 0
+
+```{r}
+ggplotly(GROSS_FOREIGN_EXCHANGE_EARNINGS_FROM_TOURISM_US_chart) %>% config(displayModeBar = F)
+
+```
+
    
 ### Chart 2
 
 ```{r}
+ggplotly(gdp_chart) %>% config(displayModeBar = F)
 
 ```   
-    
-### Chart 3
 
-```{r}
-```
+
+Hospitality
+==============================================
 

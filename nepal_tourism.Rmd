@@ -12,6 +12,8 @@ source('scripts/library.R')
 source('scripts/visualize.R')
 source('scripts/country.R')
 source('scripts/visitor.R')
+source('scripts/animator.R')
+source('scripts/adventure.R')
 ```
 
 Home 
@@ -25,6 +27,9 @@ Column3
 -----------------------------------------------------------------------
 
 
+
+
+
 Visitors
 =====================================     
 
@@ -35,7 +40,7 @@ Row {data-width=150}
 
 ```{r}
 articles <- tourist_arrival_average_length_stay$Number%>% tail(1)
-valueBox(articles, icon = "fa-pencil")
+valueBox(articles,color = "green")
 ```
 
 ### Average Stay 2018 {.value-box}
@@ -45,21 +50,33 @@ comments <- tourist_arrival_average_length_stay$`Average Length of Stay`%>% tail
 valueBox(comments, icon = "fa-comments")
 ```
 
+### Visit Nepal Tourist Target {.value-box}
+
+```{r}
+valueBox("2 Million", icon = "fa-dot-circle",color = "red")
+```
+
+
+### Visit Nepal Average Stay {.value-box}
+
+```{r}
+valueBox("14 Days", icon = "fa-bullseye",color = "red")
+```
 
  Column {.tabset .tabset-fade data-width=700 .colored }
 -----------------------------------------------------------------------
    
-### Chart 0 {.no-padding}
+<!-- ### Chart 0 {.no-padding} -->
 
-```{r}
-tourist_arrival_average_length_stay <- read_excel("data/tourist_arrival_average_length_stay.xlsx")
-```
+<!-- ```{r} -->
+<!-- tourist_arrival_average_length_stay <- read_excel("data/tourist_arrival_average_length_stay.xlsx") -->
+<!-- ``` -->
 
 
-```{r}
-hchart(tourist_arrival_average_length_stay,"spline", hcaes(x = Year,y = Number),name = "Number of Tourist")
+<!-- ```{r} -->
+<!-- hchart(tourist_arrival_average_length_stay,"spline", hcaes(x = Year,y = Number),name = "Number of Tourist") -->
 
-```
+<!-- ``` -->
 
     
 ### Tourist Arrival {.no-padding}
@@ -80,21 +97,28 @@ ggplotly(num_tourist)%>% config(displayModeBar = F)
 ggplotly(tourist_arrival_sex_chart)%>% config(displayModeBar = F)
 ```
 
-Row {data-height=450}
--------------------------------------
+
+
+    
+### Tourist Arrival By Age {.no-padding}
+
+```{r}
+ggplotly(visitor_age_chart)%>% config(displayModeBar = F)
+```
+
+
+
+
+
+
    
-### Chart 2
+### Tourist Average Stay {.no-padding}
 
 ```{r}
 
 ggplotly(ave_tourist_stay)%>% config(displayModeBar = F)
 ```   
-    
-### Chart 3
 
-```{r}
-
-```
 
 Country 
 =====================================     
@@ -111,11 +135,9 @@ tourist_by_country_chart
 
 
    
-### Tourist By Nationality
+### Tourist By Country Animation
 
-```{r}
-tourist_arrival_country_time
-```   
+![](https://raw.githubusercontent.com/sdiwash/plot_animator/master/simulations.gif?token=AEV2AF6O4T5CM3UQMAIJIZC574C66)
     
 
 NewPage1 {data-navmenu="Region" data-icon="fa-list"}
@@ -205,6 +227,25 @@ ggplotly(gdp_chart) %>% config(displayModeBar = F)
 ```   
 
 
-Hospitality
+Adventure
 ==============================================
 
+Row {data-height=600}
+-------------------------------------
+
+### Top National Park
+
+```{r}
+
+National_park_df_chart
+```
+
+
+### Top Trekking Route
+
+```{r}
+trek_df_chart
+
+```
+
+  

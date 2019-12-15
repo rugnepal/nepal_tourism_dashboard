@@ -19,23 +19,13 @@ source('scripts/adventure.R')
 
 Home 
 =====================================  
-<<<<<<< HEAD
-    
 
 
-
-Column3 {data-height = 800}
------------------------------------------------------------------------
-
-![](https://nepalimag.com/wp-content/uploads/2018/08/VISIT-NEPAL-2020-TRAVEL-NEPAL-WELCOME-NEPAL.jpeg)
-
-=======
 
 Column
 -----------------------------------------------------------------------
     
 ![](https://nepalimag.com/wp-content/uploads/2018/08/VISIT-NEPAL-2020-TRAVEL-NEPAL-WELCOME-NEPAL.jpeg)
->>>>>>> 267fbe6268d49b1dcaeed1d170d55144cf00bd1b
 
 Visitors
 =====================================     
@@ -67,11 +57,8 @@ valueBox("2 Million", icon = "fa-dot-circle",color = "red")
 ### Visit Nepal 2020 Average Stay {.value-box}
 
 ```{r}
-<<<<<<< HEAD
-valueBox("14 Days", icon = "fa-bullseye",color = "brown")
-=======
+
 valueBox("14 Days", icon = "fa-bullseye",color = "orange")
->>>>>>> 267fbe6268d49b1dcaeed1d170d55144cf00bd1b
 ```
 
  Column {.tabset .tabset-fade data-width=700 .colored }
@@ -147,22 +134,11 @@ tourist_by_country_chart
 
 <!-- NewPage1 {data-navmenu="Region" data-icon="fa-list"} -->
 <!-- =====================================      -->
-<<<<<<< HEAD
 
-<!-- Row {data-height=600} -->
-<!-- ------------------------------------- -->
-<!-- ======= -->
-=======
->>>>>>> 267fbe6268d49b1dcaeed1d170d55144cf00bd1b
 
 <!-- Row {data-height=600} -->
 <!-- ------------------------------------- -->
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 267fbe6268d49b1dcaeed1d170d55144cf00bd1b
 Purpose of Visit
 =======
 
@@ -268,30 +244,39 @@ National_park_df_chart
 trek_df_chart
 ```
 
-<<<<<<< HEAD
-Trial Context
-=====================================   
 
-Row {data-width = 600}
+
+About {data-icon="fa-info-circle"}
+========================
+
+
+Column 
 -------------------------------------
-    
-### Chart 1
-    
-```{r}
-```
-   
-Row {data-width = 600}
--------------------------------------
-   
-### Chart 2
 
-```{r}
-```   
- 
-### Chart 3
-    
-```{r}
-```
-=======
+### Visit Nepal 2020:
 
->>>>>>> 267fbe6268d49b1dcaeed1d170d55144cf00bd1b
+<center>
+
+Thanks for visiting this dashboard
+
+
+https://visitnepal2020.com/
+
+References:
+
+The team behind the project is [DataSansar](https://www.facebook.com/datasansar) :
+
+ [Diwash Shrestha](https://twitter.com/diwastha)
+
+[Binod Jung Bogati](https://twitter.com/bjungbogati)
+
+[Prakriti Dhungana](https://twitter.com/prakriti50)
+
+The data used in this dashboard can be found at:
+
+http://tourism.gov.np/
+
+This project was created in [Nepal Solvathon 2019](https://dataliteracy.github.io/solveathon/) supported by World Bank, UK AID, The Asia Foundation.
+
+
+![](https://visitnepal2020.com/images/logo-visitnepal@2x.png)

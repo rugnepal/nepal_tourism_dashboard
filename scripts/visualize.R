@@ -44,10 +44,17 @@ tourist_arrival_average_length_stay <- read_excel("data/tourist_arrival_average_
 
 
 # Tourist Arrival Chart
+<<<<<<< HEAD
 num_tourist <- ggplot(tourist_arrival_average_length_stay) + geom_line(aes(x = Year, y = Number),color = "blue") + labs(title = "Number Of Tourist")+ theme_minimal()
 
 # Tourist Average Stay
 ave_tourist_stay <- ggplot(tourist_arrival_average_length_stay) + geom_line(aes(x = Year, y = `Average Length of Stay`),color="purple") + labs(title = "Average Length of Stay")+ theme_minimal()
+=======
+num_tourist <- ggplot(tourist_arrival_average_length_stay) + geom_line(aes(x = Year, y = Number),color = "red") + labs(title = "Number Of Tourist")+ theme_minimal()
+
+# Tourist Average Stay
+ave_tourist_stay <- ggplot(tourist_arrival_average_length_stay) + geom_line(aes(x = Year, y = `Average Length of Stay`),color ="purple") + labs(title = "Average Length of Stay")+ theme_minimal()
+>>>>>>> 267fbe6268d49b1dcaeed1d170d55144cf00bd1b
 
 
 ######################### Purpose of Visit 1993 - 2018 ##################################
@@ -64,7 +71,7 @@ purpose_of_tourist_visit <- purpose_of_tourist_visit %>% clean_names()
 gg_ta <- ggplot(purpose_of_tourist_visit)
 
 # chart 1
-pilgrimage_purpose <-  gg_ta + geom_line(aes(x = year, y = pilgrimage)) + 
+pilgrimage_purpose <-  gg_ta + geom_line(aes(x = year, y = pilgrimage), color = "red") + 
     labs(title = "Pilgrimage visit by Year, 1993 - 2018") + 
     theme_minimal() 
 
@@ -72,14 +79,14 @@ pilgrimage_purpose <-  gg_ta + geom_line(aes(x = year, y = pilgrimage)) +
 plot_pilgrimage_purpose <- ggplotly(pilgrimage_purpose) %>% config(displayModeBar = F) 
 
 # chart 2
-business_purpose <- gg_ta + geom_line(aes(x = year, y = business)) + 
+business_purpose <- gg_ta + geom_line(aes(x = year, y = business), color = "green") + 
     labs(title = "Business visit by Year, 1993 - 2018") + 
     theme_minimal()
 
 plot_business_purpose <- ggplotly(business_purpose) %>% config(displayModeBar = F) 
 
 # chart 3
-trekking_purpose <- gg_ta + geom_line(aes(x = year, y = trekking_and_mountaineering)) + 
+trekking_purpose <- gg_ta + geom_line(aes(x = year, y = trekking_and_mountaineering), color = "blue") + 
     labs(title = "Trekking & Mountaineering visit by Year, 1993 - 2018") + 
     theme_minimal()
 

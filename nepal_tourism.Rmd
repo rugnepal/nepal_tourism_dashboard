@@ -19,14 +19,15 @@ source('scripts/adventure.R')
 Home 
 =====================================  
     
-Column {.sidebar}
------------------------------------------------------------------------
+
 
 
 Column3
 -----------------------------------------------------------------------
 
+![](https://nepalimag.com/wp-content/uploads/2018/08/VISIT-NEPAL-2020-TRAVEL-NEPAL-WELCOME-NEPAL.jpeg)
 
+<a class="twitter-timeline" href="https://twitter.com/2020visitnepal?ref_src=twsrc%5Etfw">Tweets by 2020visitnepal</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 
@@ -50,17 +51,17 @@ comments <- tourist_arrival_average_length_stay$`Average Length of Stay`%>% tail
 valueBox(comments, icon = "fa-comments")
 ```
 
-### Visit Nepal Tourist Target {.value-box}
+### Visit Nepal 2020 Tourist Target {.value-box}
 
 ```{r}
 valueBox("2 Million", icon = "fa-dot-circle",color = "red")
 ```
 
 
-### Visit Nepal Average Stay {.value-box}
+### Visit Nepal 2020 Average Stay {.value-box}
 
 ```{r}
-valueBox("14 Days", icon = "fa-bullseye",color = "red")
+valueBox("14 Days", icon = "fa-bullseye",color = "brown")
 ```
 
  Column {.tabset .tabset-fade data-width=700 .colored }
@@ -140,15 +141,15 @@ tourist_by_country_chart
 ![](https://raw.githubusercontent.com/sdiwash/plot_animator/master/simulations.gif?token=AEV2AF6O4T5CM3UQMAIJIZC574C66)
     
 
-NewPage1 {data-navmenu="Region" data-icon="fa-list"}
-=====================================     
-   
-Row {data-height=600}
--------------------------------------
-=======
+<!-- NewPage1 {data-navmenu="Region" data-icon="fa-list"} -->
+<!-- =====================================      -->
+
+<!-- Row {data-height=600} -->
+<!-- ------------------------------------- -->
+<!-- ======= -->
 
 
-NewPage1 {data-navmenu="Purpose of Visit" data-icon="fa-list"}
+Purpose of Visit
 =======
 
 Row {data-height=600}
@@ -197,10 +198,10 @@ plot_others_purpose
 ```
 
 
-NewPage1 {data-navmenu="Economic Context" data-icon="fa-list"}
+Economic Context
 =====================================     
    
-Row {data-height=400}
+Row {data-height=600}
 -------------------------------------
 
 ### Chart 1

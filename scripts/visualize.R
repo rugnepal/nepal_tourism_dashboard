@@ -14,7 +14,7 @@ foreign_exchange_earnings_from_tourism <- read_csv("data/95_foreign_exchange_ear
 num_tourist <- ggplot(tourist_arrival_average_length_stay) + geom_line(aes(x = Year, y = Number), size = 1,color = "red") + labs(title = "Number Of Tourist") + theme_minimal()
 
 # Tourist Average Stay
-ave_tourist_stay <- ggplot(tourist_arrival_average_length_stay) + geom_line(aes(x = Year, y = `Average Length of Stay`), size = 1) + labs(title = "Average Length of Stay") + theme_minimal()
+ave_tourist_stay <- ggplot(tourist_arrival_average_length_stay) + geom_line(aes(x = Year, y = `Average Length of Stay`), size = 1,color="blue") + labs(title = "Average Length of Stay") + theme_minimal()
 
 
 # GROSS_FOREIGN_EXCHANGE_EARNINGS_FROM_TOURISM  in NRS Chart
@@ -44,10 +44,10 @@ tourist_arrival_average_length_stay <- read_excel("data/tourist_arrival_average_
 
 
 # Tourist Arrival Chart
-num_tourist <- ggplot(tourist_arrival_average_length_stay) + geom_line(aes(x = Year, y = Number),size = 1) + labs(title = "Number Of Tourist")+ theme_minimal()
+num_tourist <- ggplot(tourist_arrival_average_length_stay) + geom_line(aes(x = Year, y = Number),color = "blue") + labs(title = "Number Of Tourist")+ theme_minimal()
 
 # Tourist Average Stay
-ave_tourist_stay <- ggplot(tourist_arrival_average_length_stay) + geom_line(aes(x = Year, y = `Average Length of Stay`),size = 1) + labs(title = "Average Length of Stay")+ theme_minimal()
+ave_tourist_stay <- ggplot(tourist_arrival_average_length_stay) + geom_line(aes(x = Year, y = `Average Length of Stay`),color="purple") + labs(title = "Average Length of Stay")+ theme_minimal()
 
 
 ######################### Purpose of Visit 1993 - 2018 ##################################

@@ -12,6 +12,7 @@ source('scripts/library.R')
 source('scripts/visualize.R')
 source('scripts/country.R')
 source('scripts/visitor.R')
+source('scripts/mapping.R')
 ```
 
 Home 
@@ -123,7 +124,7 @@ NewPage1 {data-navmenu="Region" data-icon="fa-list"}
    
 Row {data-height=600}
 -------------------------------------
-=======
+
 
 
 NewPage1 {data-navmenu="Purpose of Visit" data-icon="fa-list"}
@@ -201,10 +202,28 @@ ggplotly(GROSS_FOREIGN_EXCHANGE_EARNINGS_FROM_TOURISM_US_chart) %>% config(displ
 
 ```{r}
 ggplotly(gdp_chart) %>% config(displayModeBar = F)
-
 ```   
 
 
 Hospitality
 ==============================================
+
+### Registered Houses & Beds 2018
+
+```{r}
+create_map(df_address = "data/reg_homestay_nepal_2018.csv", column1 = "affiliated_house_2018", column2 = "affiliated_bed_2018")
+```
+
+### Chart 2
+
+```{r}
+
+```
+
+### Chart 3
+
+```{r}
+
+```
+
 

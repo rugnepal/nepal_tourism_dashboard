@@ -44,17 +44,12 @@ tourist_arrival_average_length_stay <- read_excel("data/tourist_arrival_average_
 
 
 # Tourist Arrival Chart
-<<<<<<< HEAD
+
 num_tourist <- ggplot(tourist_arrival_average_length_stay) + geom_line(aes(x = Year, y = Number),color = "blue") + labs(title = "Number Of Tourist")+ theme_minimal()
 
 # Tourist Average Stay
 ave_tourist_stay <- ggplot(tourist_arrival_average_length_stay) + geom_line(aes(x = Year, y = `Average Length of Stay`),color="purple") + labs(title = "Average Length of Stay")+ theme_minimal()
-=======
-num_tourist <- ggplot(tourist_arrival_average_length_stay) + geom_line(aes(x = Year, y = Number),color = "red") + labs(title = "Number Of Tourist")+ theme_minimal()
 
-# Tourist Average Stay
-ave_tourist_stay <- ggplot(tourist_arrival_average_length_stay) + geom_line(aes(x = Year, y = `Average Length of Stay`),color ="purple") + labs(title = "Average Length of Stay")+ theme_minimal()
->>>>>>> 267fbe6268d49b1dcaeed1d170d55144cf00bd1b
 
 
 ######################### Purpose of Visit 1993 - 2018 ##################################

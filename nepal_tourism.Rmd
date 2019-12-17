@@ -286,4 +286,4 @@ http://tourism.gov.np/
 This project was created in [Nepal Solvathon 2019](https://dataliteracy.github.io/solveathon/) supported by World Bank, UK AID, The Asia Foundation.
 
 
-![](https://visitnepal2020.com/images/logo-visitnepal@2x.png)
+![](https://visitnepal2020.com/wp-content/uploads/2019/11/logo-visitnepal@2x.png)

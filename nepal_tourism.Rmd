@@ -4,10 +4,17 @@ output:
   flexdashboard::flex_dashboard:
     orientation: rows
     vertical_layout: scroll
+    self_contained: False
 
 ---
 
-```{r global, message=FALSE, warning=FALSE, include=FALSE, cache=F}
+
+```{r setup, include=FALSE, message=FALSE, warning=FALSE, include=FALSE, cache=T}
+knitr::opts_chunk$set(message = FALSE, warning = FALSE)
+```
+
+
+```{r include=FALSE}
 source('scripts/library.R')
 source('scripts/visualize.R')
 source('scripts/country.R')
@@ -17,15 +24,15 @@ source('scripts/animator.R')
 source('scripts/adventure.R')
 ```
 
+
+
 Home 
-=====================================  
+=====================================
 
-
-
-Column
+Row 
 -----------------------------------------------------------------------
     
-![](https://nepalimag.com/wp-content/uploads/2018/08/VISIT-NEPAL-2020-TRAVEL-NEPAL-WELCOME-NEPAL.jpeg)
+<img src="https://nepalimag.com/wp-content/uploads/2018/08/VISIT-NEPAL-2020-TRAVEL-NEPAL-WELCOME-NEPAL.jpeg" width="100% !important">
 
 Visitors
 =====================================     

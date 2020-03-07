@@ -29,8 +29,15 @@ source('scripts/adventure.R')
 Home 
 =====================================
 
+<<<<<<< HEAD:index.Rmd
 <!-- Row  -->
 <!-- ----------------------------------------------------------------------- -->
+=======
+Row 
+-----------------------------------------------------------------------
+    
+<img src="https://nepalimag.com/wp-content/uploads/2018/08/VISIT-NEPAL-2020-TRAVEL-NEPAL-WELCOME-NEPAL.jpeg" width="100% !important">
+>>>>>>> c77b78f7c3e81c299b2a06ef7c6dad530eed0f8e:index.Rmd
 
 <!-- <img src="https://nepalimag.com/wp-content/uploads/2018/08/VISIT-NEPAL-2020-TRAVEL-NEPAL-WELCOME-NEPAL.jpeg" width="100% !important"> -->
 
@@ -286,4 +293,8 @@ http://tourism.gov.np/
 This project was created in [Nepal Solvathon 2019](https://dataliteracy.github.io/solveathon/) supported by World Bank, UK AID, The Asia Foundation.
 
 
+<<<<<<< HEAD:index.Rmd
 ![](https://visitnepal2020.com/wp-content/uploads/2019/11/logo-visitnepal@2x.png)
+=======
+![](https://visitnepal2020.com/wp-content/uploads/2019/11/logo-visitnepal@2x.png)
+>>>>>>> c77b78f7c3e81c299b2a06ef7c6dad530eed0f8e:index.Rmd
